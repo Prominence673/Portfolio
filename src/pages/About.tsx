@@ -5,7 +5,7 @@ import { Clock, Users, Target } from "lucide-react";
 export default function About() {
   return (
     <>
-    {/* SOBRE MÍ */}
+      {/* SOBRE MÍ */}
       <section
         id="about"
         className="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-16 px-10 py-20 overflow-hidden bg-gradient-to-br from-white to-zinc-50"
@@ -20,24 +20,38 @@ export default function About() {
             <Target className="w-4 h-4" />
             Sobre mí
           </div>
-          <h2 className="text-5xl font-bold mb-6 text-zinc-900">Creando experiencias digitales excepcionales</h2>
+          <h2 className="text-5xl font-bold mb-6 text-zinc-900">
+            Creando soluciones digitales
+          </h2>
           <Balancer>
             <p className="text-lg leading-relaxed text-zinc-600 mb-6">
-              Soy <strong className="text-zinc-900">Lautaro Souza</strong>, desarrollador Full Stack con más de <strong className="text-zinc-900">3 años de experiencia</strong> en la creación de aplicaciones web robustas y escalables. Mi pasión se enfoca en transformar ideas complejas en soluciones digitales intuitivas y eficientes.
+              Soy <strong className="text-zinc-900">Lautaro Souza</strong>,
+              desarrollador Full Stack con más de
+              <strong className="text-zinc-900">
+                {" "}
+                3 años aprendiendo y programando{" "}
+              </strong>
+              a través de proyectos personales. Me gusta construir aplicaciones web claras, funcionales y fáciles de mantener, transformando ideas en soluciones simples y efectivas.
             </p>
             <p className="text-lg leading-relaxed text-zinc-600 mb-8">
-              Creo en el <strong className="text-zinc-900">diseño centrado en el usuario</strong> y la <strong className="text-zinc-900">arquitectura limpia</strong> como pilares fundamentales para construir productos que no solo funcionen, sino que inspiren.
+              Creo en el{" "}
+              <strong className="text-zinc-900">
+                diseño y experiencia centrado en el usuario
+              </strong>{" "}
+              con <strong className="text-zinc-900">arquitectura limpia</strong>{" "}
+              como pilares necesarios para construir productos funcionales y{" "}
+              <strong className="text-zinc-900">durables</strong>.
             </p>
           </Balancer>
-          
+
           <div className="grid grid-cols-2 gap-6 mb-8">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center border border-zinc-200">
                 <Clock className="w-6 h-6 text-zinc-600" />
               </div>
               <div>
-                <p className="font-semibold text-zinc-900">+3 años</p>
-                <p className="text-sm text-zinc-500">Experiencia</p>
+                <p className="font-semibold text-zinc-900">1+ año</p>
+                <p className="text-sm text-zinc-500">Experiencia práctica</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -45,15 +59,16 @@ export default function About() {
                 <Users className="w-6 h-6 text-zinc-600" />
               </div>
               <div>
-                <p className="font-semibold text-zinc-900">+15 proyectos</p>
-                <p className="text-sm text-zinc-500">Completados</p>
+                <p className="font-semibold text-zinc-900">+10 proyectos</p>
+                <p className="text-sm text-zinc-500">Personales y académicos</p>
               </div>
             </div>
           </div>
 
           <div className="bg-gradient-to-r from-zinc-100/80 to-zinc-200/60 border border-zinc-300/30 backdrop-blur-md rounded-2xl p-6 shadow-sm">
             <p className="text-zinc-600 italic text-lg">
-              "El código bien diseñado no sólo funciona, también comunica claramente su intención y se adapta al cambio."
+              "Un buen código funciona, se entiende y no se rompe con cada
+              cambio."
             </p>
           </div>
         </motion.div>
@@ -73,11 +88,11 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/20 to-transparent"></div>
           </div>
-          
+
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-zinc-200/50 rounded-full blur-xl animate-float"></div>
           <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-zinc-300/30 rounded-full blur-xl animate-float-delayed"></div>
         </motion.div>
       </section>
-      </>
+    </>
   );
 }

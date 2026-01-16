@@ -5,7 +5,6 @@ import {
   Code2,
   FolderGit2,
   Briefcase,
-  GraduationCap,
   Mail,
 } from "lucide-react";
 
@@ -18,7 +17,6 @@ export default function Navbar() {
         <Navlink to="#skills" label="Habilidades"><Code2 /></Navlink>
         <Navlink to="#projects" label="Proyectos"><FolderGit2 /></Navlink>
         <Navlink to="#experience" label="Experiencia"><Briefcase /></Navlink>
-        <Navlink to="#education" label="Educación"><GraduationCap /></Navlink>
         <Navlink to="#contact" label="Contacto"><Mail /></Navlink>
       </ul>
     </nav>

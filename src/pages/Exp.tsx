@@ -4,14 +4,14 @@ import { Clock, Users } from "lucide-react";
 export default function Exp(){
     const experiences = [
         {
-        title: "Desarrollador Full Stack Freelance",
+        title: "Desarrollador Full Stack Jr",
         period: "2025 - Actualidad",
-        desc: "Desarrollo de soluciones modernas, modulares y escalables con tecnologías .NET y React(tsx,jsx).",
-        projects: "15+ proyectos completados",
+        desc: "Construcción de aplicaciones web modernas, modulares y escalables con tecnologías .NET y React.",
+        projects: "10+ proyectos completados",
         tech: ["React", "ASP.NET", "SQL Server", "Tailwind"]
         },
         {
-        title: "Practicante en Github",
+        title: "Proyectos Personales",
         period: "2022 - 2025",
         desc: "Creo mis proyectos personales en github aplicando buenas prácticas de desarrollo y diseño.",
         projects: "10 repositorios",
@@ -27,7 +27,7 @@ export default function Exp(){
                 <Clock className="w-4 h-4" />
                 Trayectoria
             </div>
-            <h2 className="text-5xl font-bold mb-4 text-zinc-900">Experiencia Profesional</h2>
+            <h2 className="text-5xl font-bold mb-4 text-zinc-900">Trayectoria en Desarrollo</h2>
             <p className="text-lg text-zinc-600 max-w-2xl">
                 Un recorrido de crecimiento constante, aprendiendo y aplicando las mejores prácticas en cada proyecto.
             </p>
@@ -50,7 +50,7 @@ export default function Exp(){
             >
             <h3 className="text-2xl font-semibold mb-4 text-zinc-900">Metodología de Trabajo</h3>
             <p className="text-zinc-600 mb-4">
-                Utilizo metodologías ágiles (Scrum/Kanban) con enfoque en:
+                Practico metodologías ágiles (Scrum/Kanban) con enfoque en:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-3">
