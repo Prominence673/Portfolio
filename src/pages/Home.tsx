@@ -1,5 +1,4 @@
-import {useEffect} from 'react'
-import axios from 'axios';
+
 
 export default function Home() {
   const skills = [
@@ -10,16 +9,6 @@ export default function Home() {
     "SQL Server", "MySQL", "Git Flow", "Scalability", "Minimal UI",
     "Performance", "Cloud", "Security", "Teamwork", "Agile"
   ];
-  useEffect(() =>{
-    (async () =>{
-        try{
-          const { data } = await axios.get('api/projects');
-          console.log("Fetched data:", data);
-        }catch(error){
-            console.error("Error fetching data:", error);
-        };
-    })();
-  },[]);
   return (
     <>
     {/* HOME */}
