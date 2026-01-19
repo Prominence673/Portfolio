@@ -4,18 +4,18 @@ import { Clock, Users } from "lucide-react";
 export default function Exp(){
     const experiences = [
         {
-        title: "Desarrollador Full Stack Jr",
+        title: "Desarrollador Frontend Jr",
         period: "2025 - Actualidad",
-        desc: "Construcción de aplicaciones web modernas, modulares y escalables con tecnologías .NET y React.",
+        desc: "Construcción de aplicaciones web modernas, modulares y escalables con React.",
         projects: "10+ proyectos completados",
-        tech: ["React", "ASP.NET", "SQL Server", "Tailwind"]
+        tech: ["React", "Tailwind", "JavaScript", "Typescript", "HTML", "CSS", "Git"]
         },
         {
         title: "Proyectos Personales",
         period: "2022 - 2025",
         desc: "Creo mis proyectos personales en github aplicando buenas prácticas de desarrollo y diseño.",
         projects: "10 repositorios",
-        tech: ["JavaScript", "TypeScript", "Python", "Git"]
+        tech: ["JavaScript", "TypeScript", "Git"]
         }
     ];
     return(
@@ -46,6 +46,7 @@ export default function Exp(){
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
+            viewport={{ once: true }}
             className="mt-16 bg-white/80 backdrop-blur-md border border-zinc-200 rounded-2xl p-8 shadow-sm max-w-2xl"
             >
             <h3 className="text-2xl font-semibold mb-4 text-zinc-900">Metodología de Trabajo</h3>
@@ -90,6 +91,7 @@ function ExperienceItem({ title, period, desc, projects, tech, index }: Experien
       initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
+      viewport={{ once: true }}
       className="relative flex items-start gap-6 group"
     >
       {/* Punto de la línea de tiempo */}

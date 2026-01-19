@@ -12,7 +12,7 @@ export default function Footer(){
                 <a href="#contact" className="hover:text-white transition-colors duration-300">Contacto</a>
                 </div>
             </div>
-            <p>© {new Date().getFullYear()} Lautaro Souza — Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} Lautaro Souza — Built with React & Tailwind</p>
             </div>
         </footer>
         </>

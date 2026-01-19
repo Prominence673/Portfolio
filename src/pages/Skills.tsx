@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import { Code, Database, Palette, Server } from "lucide-react";
+import { Code, Database, Palette, Server, BookMarked } from "lucide-react";
 
 export default function Skills() {
   const skillCategories = [
@@ -29,7 +29,12 @@ export default function Skills() {
     {
       icon: <Palette className="w-8 h-8" />,
       title: "Design & Tools",
-      skills: ["Figma", "Git", "Docker"],
+      skills: ["Figma", "Git"],
+    },
+    {
+      icon: <BookMarked className="w-8 h-8" />,
+      title: "Learning",
+      skills: ["Docker", "AWS", "Python"],
     },
   ];
   return (
@@ -40,7 +45,7 @@ export default function Skills() {
         className="relative min-h-screen flex flex-col items-center px-10 py-20 bg-zinc-50/80 overflow-hidden"
       >
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200 text-zinc-600 text-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 text-sm mb-6">
             <Code className="w-4 h-4" />
             Tecnologías y Herramientas
           </div>
@@ -57,7 +62,8 @@ export default function Skills() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl mb-16"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 w-full max-w-7xl mb-16"
         >
           {skillCategories.map((category, index) => (
             <Tilt key={index}>
@@ -88,6 +94,7 @@ export default function Skills() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
+          viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-4xl"
         >
           <div className="text-center">

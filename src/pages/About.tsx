@@ -14,6 +14,7 @@ export default function About() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="md:w-1/2 z-10"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 text-sm mb-6">
@@ -26,12 +27,14 @@ export default function About() {
           <Balancer>
             <p className="text-lg leading-relaxed text-zinc-600 mb-6">
               Soy <strong className="text-zinc-900">Lautaro Souza</strong>,
-              desarrollador Full Stack con más de
+              desarrollador Frontend con más de
               <strong className="text-zinc-900">
                 {" "}
                 3 años aprendiendo y programando{" "}
               </strong>
-              a través de proyectos personales. Me gusta construir aplicaciones web claras, funcionales y fáciles de mantener, transformando ideas en soluciones simples y efectivas.
+              a través de proyectos personales. Me gusta construir aplicaciones
+              web claras, funcionales y fáciles de mantener, transformando ideas
+              en soluciones simples y efectivas.
             </p>
             <p className="text-lg leading-relaxed text-zinc-600 mb-8">
               Creo en el{" "}
@@ -44,7 +47,7 @@ export default function About() {
             </p>
           </Balancer>
 
-          <div className="grid grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center border border-zinc-200">
                 <Clock className="w-6 h-6 text-zinc-600" />
@@ -63,10 +66,13 @@ export default function About() {
                 <p className="text-sm text-zinc-500">Personales y académicos</p>
               </div>
             </div>
+            <div className="flex items-center gap-3">
+                <a href="./pdf/CV souz.pdf" download="cv.pdf" className="w-40 h-12 bg-zinc-900 font-medium text-white rounded-full flex items-center justify-center border shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg">Descargar cv</a>
+            </div>
           </div>
 
           <div className="bg-gradient-to-r from-zinc-100/80 to-zinc-200/60 border border-zinc-300/30 backdrop-blur-md rounded-2xl p-6 shadow-sm">
-            <p className="text-zinc-600 italic text-lg">
+            <p className="text-zinc-600 italic text-lg flex justify-center items-center w-full">
               "Un buen código funciona, se entiende y no se rompe con cada
               cambio."
             </p>
@@ -77,10 +83,11 @@ export default function About() {
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
           className="md:w-2/5 relative flex justify-center"
         >
           <div className="absolute w-80 h-80 bg-gradient-to-tr from-zinc-300/40 to-white/30 blur-3xl rounded-full animate-pulse"></div>
-          <div className="relative flex rounded-full items-center justify-center h-200 overflow-hidden shadow-2xl border border-zinc-300/50 backdrop-blur-sm">
+          <div className="relative flex rounded-full items-center justify-center h-auto overflow-hidden shadow-2xl border border-zinc-300/50 backdrop-blur-sm">
             <img
               src="imagen.jpg"
               alt="Perfil"

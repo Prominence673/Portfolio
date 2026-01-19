@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { motion } from "framer-motion";
 import {
   Home,
   UserRound,
@@ -10,8 +11,18 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="bg-white flex flex-row fixed w-[35%] left-[32.5%] rounded-full top-2 z-200 h-14 overflow-hidden shadow-md backdrop-blur-md bg-opacity-80">
-      <ul className="w-full flex gap-3 text-xl text-black justify-center items-center z-1000">
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="
+        fixed z-50 backdrop-blur-md bg-white/80 shadow-md
+        w-full bottom-0 left-0 h-16
+        md:top-2 md:bottom-auto md:left-1/2 md:-translate-x-1/2
+        md:w-[35%] md:h-14 md:rounded-full
+      "
+    >
+      <ul className="w-full h-full flex justify-around md:justify-center md:gap-3 items-center text-black">
         <Navlink to="#home" label="Inicio"><Home /></Navlink>
         <Navlink to="#about" label="Sobre mí"><UserRound /></Navlink>
         <Navlink to="#skills" label="Habilidades"><Code2 /></Navlink>
@@ -19,7 +30,7 @@ export default function Navbar() {
         <Navlink to="#experience" label="Experiencia"><Briefcase /></Navlink>
         <Navlink to="#contact" label="Contacto"><Mail /></Navlink>
       </ul>
-    </nav>
+    </motion.nav>
   );
 }
 
@@ -27,30 +38,38 @@ function Navlink({
   to,
   children,
   label,
-  style,
 }: {
   to: string;
   children: ReactNode;
   label: string;
-  style?: string;
 }) {
   return (
-    <li
-      className={`group relative flex items-center gap-2 rounded-full shadow-md px-3 py-2 
-      transition-all duration-500 ease-in-out hover:bg-gray-100 hover:-translate-y-1 ${style}`}
+    <motion.li
+      whileHover={{ y: -4, scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="
+        group relative flex items-center justify-center
+        rounded-full px-3 py-2 cursor-pointer
+        bg-white md:hover:bg-gray-100 shadow-md
+      "
     >
       <a href={to} className="flex items-center justify-center">
-        <span className="transition-transform duration-500 ease-in-out group-hover:scale-110">
+        <span className="transition-transform duration-300 group-hover:scale-110">
           {children}
         </span>
+
+        {/* TEXTO SOLO EN DESKTOP */}
         <span
-          className="text-sm font-medium opacity-0 w-0 m-0 p-0 overflow-hidden 
-          group-hover:opacity-100 group-hover:w-auto group-hover:ml-2 whitespace-nowrap 
-          transition-all duration-500 ease-in-out"
+          className="
+            hidden md:block text-sm font-medium opacity-0 w-0 overflow-hidden
+            group-hover:opacity-100 group-hover:w-auto group-hover:ml-2
+            whitespace-nowrap transition-all duration-300
+          "
         >
           {label}
         </span>
       </a>
-    </li>
+    </motion.li>
   );
 }
